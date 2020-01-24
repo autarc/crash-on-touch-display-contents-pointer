@@ -1,0 +1,5 @@
+/* defined for causing the issue using an external style sheet */
+button {
+  display: contents;
+  cursor: pointer;
+}

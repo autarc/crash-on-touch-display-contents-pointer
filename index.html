@@ -1,0 +1,46 @@
+<html>
+<head>
+  <!-- defined for causing the issue using an external stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    /* defined for causing the issue using a style tag */
+    span {
+      display: contents;
+      cursor: pointer;
+    }
+    /* defined for easier interaction and readiability */
+    div:first-of-type {
+      font-style: italic;
+      margin: 50 0px;
+    }
+    div, span, button {
+      font-size: 32px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    To reproduce the issue select any HTML element which has "display: contents" and "cursor:
+    pointer" styles associated on a medium that uses touch events (e.g. a touchscreen or the response view of the devtools).
+  </div>
+  <br />
+  <br />
+  <div style="display: contents; cursor: pointer;">
+    1.) inline styled DIV
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <span>
+    2.) style tagged SPAN
+  </span>
+  <br />
+  <br />
+  <br />
+  <br />
+  <button>
+    3.) external stylesheet BUTTON
+  </button>
+</body>
+</html>
